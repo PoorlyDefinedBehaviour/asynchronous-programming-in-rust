@@ -14,7 +14,7 @@ fn main() -> std::io::Result<()> {
     let mut poll = Poll::new()?;
     let n_events = 5;
     let mut streams = Vec::new();
-    let addr = "localhost:8001";
+    let addr = "localhost:8080";
     for i in 0..n_events {
         let delay = (n_events - i) * 1000;
         let url_path = format!("/{delay}/request-{i}");
